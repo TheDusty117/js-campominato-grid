@@ -20,8 +20,8 @@ body {
   flex-wrap: wrap;
 }
 
-.griglia > .cella {
-  width: 10%;
+.cella {
+  /* width: 10%; */
   aspect-ratio: 1;
   border: 2px solid crimson;
   display: flex;
@@ -30,3 +30,5 @@ body {
   font-size: 20px;
 
 }
+
+
