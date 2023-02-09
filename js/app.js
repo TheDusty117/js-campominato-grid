@@ -1,16 +1,22 @@
 console.log('CAMPO MINATO')
 
 
+
 document.querySelector('.play-button').addEventListener('click',function(){ //on click compare la griglia
   
+
   
-  let latoGriglia = 10
+  const askLevel = parseInt(prompt('inserisci difficoltà da 10 a 20'))
+  
+  let latoGriglia = askLevel
   let numeroCelle = latoGriglia * latoGriglia
   
   console.log(latoGriglia, numeroCelle)
   
   const grigliaElement = document.querySelector('.griglia') //prendo il primo ed unico div con classe griglia dal DOM
   console.log(grigliaElement)
+
+  grigliaElement.innerHTML = ('') // SCOMMENTA per dare al button play, anche il reset della griglia
   
   //generare dentro il DIV con classe 'griglia' 100 celle con il loro stile
   
@@ -32,14 +38,16 @@ document.querySelector('.play-button').addEventListener('click',function(){ //on
     })
   }
   
+  
 })
 
+//BOTTONE DI RESET TOTALE
+document.querySelector('.reset-button').addEventListener('click',function(){
 
+  const grigliaElement = document.querySelector('.griglia') //prendo il primo ed unico div con classe griglia dal DOM
+  console.log(grigliaElement)
 
-function onClickREset() {
-  latoGriglia
-  document.querySelector('.griglia').innerHTML = latoGriglia
+  grigliaElement.innerHTML = ('') 
 
-  numeroCelle
-  document.querySelector('.cella').innerHTML = numeroCelle
-}
+})
+
