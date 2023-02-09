@@ -1,8 +1,9 @@
 console.log('CAMPO MINATO')
 
-document.querySelector('.play-button').addEventListener('click',function(){
 
-
+document.querySelector('.play-button').addEventListener('click',function(){ //on click compare la griglia
+  
+  
   let latoGriglia = 10
   let numeroCelle = latoGriglia * latoGriglia
   
@@ -25,11 +26,20 @@ document.querySelector('.play-button').addEventListener('click',function(){
     grigliaElement.append(divCreateElement)
     
     divCreateElement.addEventListener('click', function() { // A OGNI GIRO, SICCOME SIAMO DENTRO IL FOR, verra' creato un EVENTLISTENER CLICK ad ogni iterazione insieme ai numeri e ai vari div con la rispettiva classe
-      console.log(`click ${num}`)
+      console.log(`click ${num}`)     //con il backtick uso template literal, per scrivere stringhe, con il dollaro e graffe gli dico che non e' piu una stringa ma una VARIABILE
+      divCreateElement.style.backgroundColor = 'blue'
+      
     })
   }
-
-
+  
 })
 
 
+
+function onClickREset() {
+  latoGriglia
+  document.querySelector('.griglia').innerHTML = latoGriglia
+
+  numeroCelle
+  document.querySelector('.cella').innerHTML = numeroCelle
+}
