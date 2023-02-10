@@ -4,16 +4,16 @@ console.log('CAMPO MINATO')
 
 document.querySelector('.play-button').addEventListener('click',function(){ //on click compare la griglia
   
+  //scommenta qui giu per selettore livello difficolta'---------
+  // let askLevel = 0
   
-  let askLevel = 0
-  
-  while (askLevel < 10 || askLevel > 20 || isNaN(askLevel)) {
-    askLevel = parseInt(prompt('inserisci difficoltà da 10 a 20'))
-  }
+  // while (askLevel < 10 || askLevel > 20 || isNaN(askLevel)) {
+  //   askLevel = parseInt(prompt('inserisci difficoltà da 10 a 20'))
+  // }
 
   //variabili dei bottoni?
-
-  let latoGriglia = askLevel
+  // scommenta qua su-------
+  let latoGriglia = 10
   let numeroCelle = latoGriglia * latoGriglia
   
   console.log(latoGriglia, numeroCelle)
@@ -46,15 +46,6 @@ document.querySelector('.play-button').addEventListener('click',function(){ //on
   
 })
 
-//BOTTONE DI RESET TOTALE E CHIUSURA GRIGLIA
-document.querySelector('.reset-button').addEventListener('click',function(){
-
-  const grigliaElement = document.querySelector('.griglia') //prendo il primo ed unico div con classe griglia dal DOM
-  console.log(grigliaElement)
-
-  grigliaElement.innerHTML = ('') 
-
-})
 
 
 function onClick(){}
@@ -64,3 +55,16 @@ function startGame(){}
 function resetGame(){}
 
 function generateGrid(){}
+
+
+
+//GENERARE TOT BOMBE
+
+//CREARE ARRAY DI BOMBE const bombe = [5,7,6,8,10]
+
+// bombe.include('5')
+
+//non dobbiamo avere numeri duplicati
+
+//L'ARRAY CON LE BOMBE VA CONFRONTATO CON LA CASELLA CLICCATA, 
+//comunque creare confronto da array e casella
